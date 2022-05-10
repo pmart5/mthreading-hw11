@@ -21,7 +21,7 @@ public class Main {
         try {
             Thread.sleep(15000);
         } catch (InterruptedException err) {
-            Thread.currentThread().interrupt();
+            err.printStackTrace();
         }
         System.out.println("Завершаю все потоки:");
         myThreadOne.getThreadGroup().interrupt();
