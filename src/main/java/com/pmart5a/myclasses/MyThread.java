@@ -2,11 +2,13 @@ package com.pmart5a.myclasses;
 
 public class MyThread extends Thread {
 
+    public final int DELAY_TIME = 2500;
+
     @Override
     public void run() {
         try {
             while(!isInterrupted()) {
-                Thread.sleep(2500);
+                Thread.sleep(DELAY_TIME);
                 System.out.printf("Я %s. Всем привет!\n", getName());
             }
         } catch (InterruptedException err) {

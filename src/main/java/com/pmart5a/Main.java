@@ -4,6 +4,8 @@ import com.pmart5a.myclasses.MyThread;
 
 public class Main {
 
+    public static final int DELAY_TIME_MAIN = 15000;
+
     public static void main(String[] args) {
         System.out.println("Создаю и запускаю потоки...");
         MyThread[] myThreads = {new MyThread(), new MyThread(), new MyThread(), new MyThread()};
@@ -15,7 +17,7 @@ public class Main {
             myThread.start();
         }
         try {
-            Thread.sleep(15000);
+            Thread.sleep(DELAY_TIME_MAIN);
         } catch (InterruptedException err) {
             err.printStackTrace();
         }
