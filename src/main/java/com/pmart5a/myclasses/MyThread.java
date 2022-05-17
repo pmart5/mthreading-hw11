@@ -4,6 +4,10 @@ public class MyThread extends Thread {
 
     public final int DELAY_TIME = 2500;
 
+    public MyThread(String name) {
+        super(name);
+    }
+
     @Override
     public void run() {
         try {
